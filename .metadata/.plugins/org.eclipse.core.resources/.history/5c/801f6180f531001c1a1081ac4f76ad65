@@ -1,0 +1,5 @@
+package com.delivery.sergiolog.domain.repository;
+
+public interface ClientRepository {
+
+}

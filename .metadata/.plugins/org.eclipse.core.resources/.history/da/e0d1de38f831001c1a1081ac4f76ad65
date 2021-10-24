@@ -1,0 +1,30 @@
+package com.delivery.sergiolog.api.controller;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.delivery.sergiolog.domain.model.Client;
+import com.delivery.sergiolog.domain.repository.ClientRepository;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@RestController
+public class ControllerClient {
+	
+
+	private ClientRepository clientRepository;
+	
+	@GetMapping("/clients")
+	public List<Client> listar() {
+		return clientRepository.findByNameCountaining("Sérgio");
+		
+	}
+
+}

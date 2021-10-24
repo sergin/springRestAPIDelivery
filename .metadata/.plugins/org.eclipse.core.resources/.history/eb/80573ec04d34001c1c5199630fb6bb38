@@ -1,0 +1,16 @@
+package com.delivery.sergiolog.api.exceptionhandler;
+
+import java.time.LocalDateTime;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Problem {
+	
+	private Integer status;
+	private LocalDateTime dateHour;
+	private String title;
+
+}

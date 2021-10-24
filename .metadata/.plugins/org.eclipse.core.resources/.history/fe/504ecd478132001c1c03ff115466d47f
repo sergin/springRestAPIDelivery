@@ -1,0 +1,5 @@
+package com.delivery.sergiolog.api.exceptionhandler;
+
+public class Problem {
+
+}

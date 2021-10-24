@@ -1,0 +1,27 @@
+package com.delivery.sergiolog.domain.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.delivery.sergiolog.domain.model.Client;
+import com.delivery.sergiolog.domain.repository.ClientRepository;
+
+import lombok.AllArgsConstructor;
+
+@Service
+@AllArgsConstructor
+public class CatalogClientService {
+
+	private ClientRepository clientRepository;
+	
+	@Transactional
+	public Client saveClient(Client client) {
+		return clientRepository.save(client);
+	}
+	
+	public void deleteClient(Long idClient) {
+		clientRepository.deleteById(idClient);
+	}
+	
+}

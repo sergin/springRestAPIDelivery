@@ -1,0 +1,5 @@
+package com.delivery.sergiolog.domain.model;
+
+public class Client {
+
+}
